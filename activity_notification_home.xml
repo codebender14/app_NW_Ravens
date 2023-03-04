@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Notification Label -->
+    <TextView
+        android:id="@+id/notificationLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Notifications"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <!-- Search Bar -->
+    <EditText
+        android:id="@+id/searchBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Search"
+        android:inputType="text"
+        android:maxLines="1"
+        android:singleLine="true" />
+
+    <!-- Wellness Center  -->
+    <TextView
+        android:id="@+id/wc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableEnd="@drawable/ic_forward_arrow"
+        android:onClick="onClick"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:text="Wellness Center"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <!-- Recreation Center -->
+    <TextView
+        android:id="@+id/rc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableEnd="@drawable/ic_forward_arrow"
+        android:onClick="onClick"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:text="Recreation Center"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <!-- NW Events -->
+    <TextView
+        android:id="@+id/nwe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableEnd="@drawable/ic_forward_arrow"
+        android:onClick="onClick"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:text="NW Events"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <!-- NW News -->
+    <TextView
+        android:id="@+id/nwn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableEnd="@drawable/ic_forward_arrow"
+        android:onClick="onClick"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:text="NW News"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <!-- Academics -->
+    <TextView
+        android:id="@+id/aca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableEnd="@drawable/ic_forward_arrow"
+        android:onClick="onClick"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:text="Academics"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+</LinearLayout>
