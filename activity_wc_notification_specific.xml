@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Notification Label -->
+    <TextView
+        android:id="@+id/notificationLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Wellness Center"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <!-- Search Bar -->
+    <EditText
+        android:id="@+id/searchBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Search"
+        android:inputType="text"
+        android:maxLines="1"
+        android:singleLine="true" />
+    <!-- Notification 1 -->
+    <TextView
+        android:id="@+id/noti1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableEnd="@drawable/ic_forward_arrow"
+        android:onClick="onClick"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:text="Notification 1"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+    <!-- Notification 2 -->
+    <TextView
+        android:id="@+id/noti2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableEnd="@drawable/ic_forward_arrow"
+        android:onClick="onClick"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:text="Notification 2"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+    <!-- Notification 3 -->
+    <TextView
+        android:id="@+id/noti3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableEnd="@drawable/ic_forward_arrow"
+        android:onClick="onClick"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:text="Notification 3"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+    <!-- Notification 4 -->
+    <TextView
+        android:id="@+id/noti4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableEnd="@drawable/ic_forward_arrow"
+        android:onClick="onClick"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:text="Notification 4"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="137dp"
+        android:layout_height="wrap_content"
+        android:text="Back" />
+
+
+</LinearLayout>
