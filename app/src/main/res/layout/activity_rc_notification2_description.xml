@@ -8,7 +8,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="Notification 2"
+        android:text="Parks and Recreation Board Meeting"
         android:textSize="24sp"
         android:textStyle="bold" />
 
@@ -17,16 +17,24 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/notificationLabel"
-        android:hint="Contains the description for notification 2  of Recreation Centre"
+        android:hint="The Raymore Parks and  Recreation Board meets at 6 p.m every thursday at the University Recreation Center"
         android:inputType="textMultiLine"
         android:minLines="4"
         android:gravity="top|left" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="137dp"
+<!--    <Button-->
+<!--        android:id="@+id/button"-->
+<!--        android:layout_width="137dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/description_text"-->
+<!--        android:text="Back" />-->
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/description_text"
-        android:text="Back" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/rec2" />
 
 </RelativeLayout>
