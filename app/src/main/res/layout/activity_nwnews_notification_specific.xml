@@ -49,31 +49,31 @@
         android:paddingTop="16dp"
         android:paddingBottom="16dp"/>
     <!-- Notification 3 -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Notification 3"
-        android:textSize="18sp"
-        android:textColor="@color/black"
-        android:drawableEnd="@drawable/ic_forward_arrow"
-        android:paddingTop="16dp"
-        android:paddingBottom="16dp"/>
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Notification 3"-->
+<!--        android:textSize="18sp"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:drawableEnd="@drawable/ic_forward_arrow"-->
+<!--        android:paddingTop="16dp"-->
+<!--        android:paddingBottom="16dp"/>-->
     <!-- Notification 4 -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Notification 4"
-        android:textSize="18sp"
-        android:textColor="@color/black"
-        android:drawableEnd="@drawable/ic_forward_arrow"
-        android:paddingTop="16dp"
-        android:paddingBottom="16dp"/>
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Notification 4"-->
+<!--        android:textSize="18sp"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:drawableEnd="@drawable/ic_forward_arrow"-->
+<!--        android:paddingTop="16dp"-->
+<!--        android:paddingBottom="16dp"/>-->
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="137dp"
-        android:layout_height="wrap_content"
-        android:text="Back" />
+<!--    <Button-->
+<!--        android:id="@+id/button"-->
+<!--        android:layout_width="137dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Back" />-->
 
 
 </LinearLayout>
