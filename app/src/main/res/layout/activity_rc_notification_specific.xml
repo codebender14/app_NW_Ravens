@@ -35,7 +35,7 @@
         android:onClick="onClick"
         android:paddingTop="16dp"
         android:paddingBottom="16dp"
-        android:text="Notification 1"
+        android:text="Spring Craft Fair"
         android:textColor="@color/black"
         android:textSize="18sp" />
     <!-- Notification 2 -->
@@ -47,39 +47,39 @@
         android:onClick="onClick"
         android:paddingTop="16dp"
         android:paddingBottom="16dp"
-        android:text="Notification 2"
+        android:text="Parks and Recreation Board Meeting"
         android:textColor="@color/black"
         android:textSize="18sp" />
     <!-- Notification 3 -->
-    <TextView
-        android:id="@+id/noti3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:drawableEnd="@drawable/ic_forward_arrow"
-        android:onClick="onClick"
-        android:paddingTop="16dp"
-        android:paddingBottom="16dp"
-        android:text="Notification 3"
-        android:textColor="@color/black"
-        android:textSize="18sp" />
+<!--    <TextView-->
+<!--        android:id="@+id/noti3"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:drawableEnd="@drawable/ic_forward_arrow"-->
+<!--        android:onClick="onClick"-->
+<!--        android:paddingTop="16dp"-->
+<!--        android:paddingBottom="16dp"-->
+<!--        android:text="Notification 3"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="18sp" />-->
     <!-- Notification 4 -->
-    <TextView
-        android:id="@+id/noti4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:drawableEnd="@drawable/ic_forward_arrow"
-        android:onClick="onClick"
-        android:paddingTop="16dp"
-        android:paddingBottom="16dp"
-        android:text="Notification 4"
-        android:textColor="@color/black"
-        android:textSize="18sp" />
+<!--    <TextView-->
+<!--        android:id="@+id/noti4"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:drawableEnd="@drawable/ic_forward_arrow"-->
+<!--        android:onClick="onClick"-->
+<!--        android:paddingTop="16dp"-->
+<!--        android:paddingBottom="16dp"-->
+<!--        android:text="Notification 4"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="18sp" />-->
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="137dp"
-        android:layout_height="wrap_content"
-        android:text="Back" />
+<!--    <Button-->
+<!--        android:id="@+id/button"-->
+<!--        android:layout_width="137dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Back" />-->
 
 
 </LinearLayout>

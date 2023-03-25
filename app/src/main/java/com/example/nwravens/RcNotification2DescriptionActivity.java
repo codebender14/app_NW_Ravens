@@ -14,15 +14,15 @@ public class RcNotification2DescriptionActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rc_notification2_description);
-        backButton = findViewById(R.id.button);
+//        backButton = findViewById(R.id.button);
 
-        backButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(RcNotification2DescriptionActivity.this, RcNotificationSpecificActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        });
+//        backButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(RcNotification2DescriptionActivity.this, RcNotificationSpecificActivity.class);
+//                startActivity(intent);
+//                finish();
+//            }
+//        });
     }
 }
