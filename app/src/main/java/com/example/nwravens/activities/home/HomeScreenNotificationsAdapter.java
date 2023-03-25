@@ -1,5 +1,6 @@
 package com.example.nwravens.activities.home;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.nwravens.R;
+import com.example.nwravens.activities.home.category.CategoryScreenActivity;
 import com.example.nwravens.datamodels.NotificationCategory;
 
 import java.util.List;
@@ -32,6 +34,7 @@ public class HomeScreenNotificationsAdapter extends RecyclerView.Adapter<HomeScr
 
     @Override
     public void onBindViewHolder(@NonNull HomeScreenNotificationsViewHolder holder, int position) {
+        holder.setNotificationCategory(list.get(position));
         holder.notificationName.setText(list.get(position).category);
         holder.notificationCount.setText(String.valueOf(list.get(position).notification_count));
     }
@@ -46,10 +49,25 @@ public class HomeScreenNotificationsAdapter extends RecyclerView.Adapter<HomeScr
         private TextView notificationName;
         private TextView notificationCount;
 
+        private NotificationCategory notificationCategory;
+
         public HomeScreenNotificationsViewHolder(@NonNull View itemView) {
             super(itemView);
             notificationName = itemView.findViewById(R.id.home_screen_notification_list_item_text);
             notificationCount = itemView.findViewById(R.id.home_screen_notification_list_item_text_count);
+            itemView.setOnClickListener(new View.OnClickListener() {
+
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(view.getContext(), CategoryScreenActivity.class);
+                    intent.putExtra("category_name", notificationCategory.category);
+                    view.getContext().startActivity(intent);
+                }
+            });
+        }
+
+        public void setNotificationCategory(NotificationCategory notificationCategory) {
+            this.notificationCategory = notificationCategory;
         }
     }
 }

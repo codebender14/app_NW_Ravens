@@ -58,7 +58,7 @@ public class DataWriter {
                 notificationData.put("title", data.title);
                 notificationData.put("description", data.description);
                 notificationData.put("image_url", data.imageUrl);
-                notificationData.put("is_new", data.isNew);
+                notificationData.put("is_new", data.is_new);
                 notificationData.put("is_deleted", data.isDeleted);
                 notificationDataList.add(notificationData);
             }

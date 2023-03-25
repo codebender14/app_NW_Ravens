@@ -2,7 +2,12 @@ package com.example.nwravens.datamodels;
 
 import com.google.gson.annotations.SerializedName;
 
-public class NotificationData {
+import java.io.Serializable;
+
+
+public class NotificationData implements Serializable {
+    @SerializedName("id")
+    public String id;
     @SerializedName("title")
     public String title;
 
@@ -13,7 +18,7 @@ public class NotificationData {
     public String imageUrl;
 
     @SerializedName("is_new")
-    public boolean isNew;
+    public boolean is_new;
 
     @SerializedName("is_deleted")
     public boolean isDeleted;
@@ -43,19 +48,11 @@ public class NotificationData {
         this.imageUrl = imageUrl;
     }
 
-    public boolean isNew() {
-        return isNew;
+    public String getId() {
+        return id;
     }
 
-    public void setNew(boolean aNew) {
-        isNew = aNew;
-    }
-
-    public boolean isDeleted() {
-        return isDeleted;
-    }
-
-    public void setDeleted(boolean deleted) {
-        isDeleted = deleted;
+    public void setId(String id) {
+        this.id = id;
     }
 }

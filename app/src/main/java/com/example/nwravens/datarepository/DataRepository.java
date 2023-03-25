@@ -2,10 +2,11 @@ package com.example.nwravens.datarepository;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.provider.ContactsContract;
 
 import com.example.nwravens.firebase.FirebaseDataCallback;
 import com.example.nwravens.firebase.FirebaseDataReader;
+
+import java.io.Serializable;
 
 public class DataRepository {
 
@@ -29,7 +30,18 @@ public class DataRepository {
     }
 
     public void setDeleted(String id) {
-        //  sharedPreferences.edit().putBoolean()
+        String readStatus = String.format("del_%s", id);
+        sharedPreferences.edit().putBoolean(readStatus, true).apply();
     }
 
+    public void setMarkRead(String id, Boolean status) {
+        String readStatus = String.format("read_%s", id);
+        sharedPreferences.edit().putBoolean(readStatus, status).apply();
+    }
+
+    public Boolean getReadStatus(String id) {
+        String readStatus = String.format("read_%s", id);
+        return sharedPreferences.getBoolean(readStatus, false);
+    }
 }
+
