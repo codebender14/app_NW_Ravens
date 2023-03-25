@@ -37,7 +37,7 @@
         android:layout_below="@id/description_text"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
-        android:src="@drawable/women" />
+        android:src="@drawable/womens" />
 
 
 </RelativeLayout>
