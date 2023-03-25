@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "942764180439",
+    "project_id": "nwravens-71363",
+    "storage_bucket": "nwravens-71363.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:942764180439:android:a1be1a202de897a6024192",
+        "android_client_info": {
+          "package_name": "com.example.nwravens"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "942764180439-q6475ssk9ka7miupn84a1bknn0jt3not.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAsLFDTvo0RJW56YKBlhfypvHwqtR2Oyr4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "942764180439-q6475ssk9ka7miupn84a1bknn0jt3not.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
