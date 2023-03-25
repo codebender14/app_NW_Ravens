@@ -1,0 +1,170 @@
+{
+  "notifications": [
+    {
+      "category": "Wellness Center",
+      "notification_count": 4,
+      "notification_data": [
+        {
+          "id": "",
+          "title": "Women's History Month",
+          "description": "The nationwide observance of Women History Month this year uses the themeCelebrating Women Who Tell Our Stories as a tribute to women in every community who have devoted their lives and talents to producing art and news, pursuing truth and reflecting society",
+          "image_url": "",
+          "is_new": true,
+          "is_deleted": false
+        },
+        {
+          "id": "",
+          "title": "Health Counselling",
+          "description": " The goal of health counseling is to empower people to make informed decisions about their health and take positive steps towards achieving their health-related goals.",
+          "image_url": "",
+          "is_new": true,
+          "is_deleted": false
+        }
+      ]
+    },
+    {
+      "category": "Recreation Center",
+      "notification_count": 4,
+      "notification_data": [
+        {
+          "id": "",
+          "title": "Virtual Job Fair",
+          "description": "Join us for our virtual job fair on April 15th, where you can connect with top employers and learn about exciting job opportunities in various industries.",
+          "image_url": "https://example.com/images/job_fair.jpg",
+          "is_new": true,
+          "is_deleted": false
+        },
+        {
+          "id": "",
+          "title": "Mental Health Awareness Month",
+          "description": "May is Mental Health Awareness Month, a time to raise awareness and reduce stigma around mental health issues. Let's work together to promote mental wellness and support those who are struggling.",
+          "image_url": "https://example.com/images/mental_health.jpg",
+          "is_new": true,
+          "is_deleted": false
+        },
+        {
+          "id": "",
+          "title": "Healthy Eating Challenge",
+          "description": "Join our 30-day healthy eating challenge and learn how to make delicious and nutritious meals that will fuel your body and mind. Get support and motivation from our community of like-minded individuals.",
+          "image_url": "https://example.com/images/healthy_food.jpg",
+          "is_new": true,
+          "is_deleted": false
+        },
+        {
+          "id": "",
+          "title": "Financial Planning Webinar",
+          "description": "Are you ready to take control of your finances? Join our free webinar on financial planning and learn how to create a budget, save for the future, and invest wisely.",
+          "image_url": "https://example.com/images/finance.jpg",
+          "is_new": true,
+          "is_deleted": true
+        }
+      ]
+    },
+    {
+      "category": "Community Event",
+      "notification_count": 3,
+      "notification_data": [
+        {
+          "id": "",
+          "title": "Family Fun Day",
+          "description": "Join us for a day of family fun and games at the park! We'll have a bounce house, face painting, and more. Don't miss out on the fun!",
+          "image_url": "https://example.com/images/family_fun.jpg",
+          "is_new": true,
+          "is_deleted": false
+        },
+        {
+          "id": "",
+          "title": "Summer Concert Series",
+          "description": "Get ready for our summer concert series featuring local musicians and bands. Bring your lawn chairs and enjoy the music under the stars!",
+          "image_url": "https://example.com/images/summer_concert.jpg",
+          "is_new": true,
+          "is_deleted": false
+        },
+        {
+          "id": "",
+          "title": "Community Clean-Up Day",
+          "description": "Help keep our community beautiful by joining us for our community clean-up day. We'll provide the gloves and trash bags, you provide the enthusiasm!",
+          "image_url": "https://example.com/images/community_clean.jpg",
+          "is_new": true,
+          "is_deleted": false
+        }
+      ]
+    },
+    {
+      "category": "Academic Events",
+      "notification_count": 5,
+      "notification_data": [
+        {
+          "id": "",
+          "title": "Scholarship Applications Open",
+          "description": "Apply now for our annual scholarship program. We offer scholarships in various fields of study to help students achieve their academic goals.",
+          "image_url": "",
+          "is_new": true,
+          "is_deleted": false
+        },
+        {
+          "id": "",
+          "title": "Guest Lecture on Neuroscience",
+          "description": "Join us for a guest lecture by Dr. Jane Smith on the latest developments in neuroscience. This is a great opportunity to learn from a leading expert in the field.",
+          "image_url": "",
+          "is_new": true,
+          "is_deleted": false
+        },
+        {
+          "id": "",
+          "title": "Study Abroad Information Session",
+          "description": "Thinking about studying abroad? Join us for an information session to learn about our study abroad programs and how to apply.",
+          "image_url": "",
+          "is_new": true,
+          "is_deleted": false
+        },
+        {
+          "id": "",
+          "title": "Career Fair",
+          "description": "Connect with top employers and explore career opportunities at our annual career fair. Bring your resume and dress to impress!",
+          "image_url": "",
+          "is_new": true,
+          "is_deleted": false
+        },
+        {
+          "id": "",
+          "title": "Research Symposium",
+          "description": "Join us for our annual research symposium featuring presentations from our faculty and students. This is a great opportunity to learn about the latest research in various fields.",
+          "image_url": "",
+          "is_new": true,
+          "is_deleted": true
+        }
+      ]
+    },
+    {
+      "category": "College News",
+      "notification_count": 3,
+      "notification_data": [
+        {
+          "id": "",
+          "title": "New Campus Building Opening",
+          "description": "We are excited to announce the opening of our new state-of-the-art campus building. Come see the new facilities and learn about our programs!",
+          "image_url": "",
+          "is_new": true,
+          "is_deleted": false
+        },
+        {
+          "id": "",
+          "title": "COVID-19 Safety Update",
+          "description": "As the COVID-19 situation continues to evolve, we are committed to providing a safe and healthy learning environment. Stay updated on our latest safety measures and guidelines.",
+          "image_url": "",
+          "is_new": true,
+          "is_deleted": false
+        },
+        {
+          "id": "",
+          "title": "Alumni Homecoming Weekend",
+          "description": "Join us for our annual alumni homecoming weekend, where you can reconnect with classmates, attend sporting events, and reminisce about your college days.",
+          "image_url": "",
+          "is_new": true,
+          "is_deleted": false
+        }
+      ]
+    }
+  ]
+}

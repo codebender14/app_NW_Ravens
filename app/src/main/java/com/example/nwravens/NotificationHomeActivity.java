@@ -6,6 +6,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.nwravens.datamodels.Notifications;
+import com.example.nwravens.firebase.FirebaseDataCallback;
+import com.example.nwravens.firebase.FirebaseDataReader;
+
 public class NotificationHomeActivity extends AppCompatActivity {
 
     private TextView wellnessCenter;
@@ -62,5 +66,27 @@ public class NotificationHomeActivity extends AppCompatActivity {
         });
 
 
+        FirebaseDataReader firebaseDataReader = new FirebaseDataReader();
+        firebaseDataReader.readNotifications(new FirebaseDataCallback() {
+            @Override
+            public void showData(Notifications notifications) {
+
+            }
+
+            @Override
+            public void showError(Throwable error) {
+
+            }
+
+            @Override
+            public void showProgress() {
+
+            }
+
+            @Override
+            public void hideProgress() {
+
+            }
+        });
     }
 }
