@@ -18,15 +18,15 @@ public class NWEventsNotificationSpecificActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nwevents_notification_specific);
-        backButton = findViewById(R.id.button);
-        backButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(NWEventsNotificationSpecificActivity.this, NotificationHomeActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        });
+//        backButton = findViewById(R.id.button);
+//        backButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(NWEventsNotificationSpecificActivity.this, NotificationHomeActivity.class);
+//                startActivity(intent);
+//                finish();
+//            }
+//        });
         category1TextView = findViewById(R.id.noti1);
         category1TextView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,21 +43,21 @@ public class NWEventsNotificationSpecificActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        category3TextView = findViewById(R.id.noti3);
-        category3TextView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(NWEventsNotificationSpecificActivity.this, NWEventsNotification3DescriptionActivity.class);
-                startActivity(intent);
-            }
-        });
-        category4TextView = findViewById(R.id.noti4);
-        category4TextView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(NWEventsNotificationSpecificActivity.this, NWEventsNotification4DescriptionActivity.class);
-                startActivity(intent);
-            }
-        });
+//        category3TextView = findViewById(R.id.noti3);
+//        category3TextView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(NWEventsNotificationSpecificActivity.this, NWEventsNotification3DescriptionActivity.class);
+//                startActivity(intent);
+//            }
+//        });
+//        category4TextView = findViewById(R.id.noti4);
+//        category4TextView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(NWEventsNotificationSpecificActivity.this, NWEventsNotification4DescriptionActivity.class);
+//                startActivity(intent);
+//            }
+//        });
     }
 }

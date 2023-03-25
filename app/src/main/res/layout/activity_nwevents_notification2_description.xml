@@ -8,7 +8,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="Notification 2"
+        android:text="Women's History Month"
         android:textSize="24sp"
         android:textStyle="bold" />
 
@@ -22,11 +22,21 @@
         android:minLines="4"
         android:gravity="top|left" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="137dp"
+<!--    <Button-->
+<!--        android:id="@+id/button"-->
+<!--        android:layout_width="137dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/description_text"-->
+<!--        android:text="Back" />-->
+
+    <!-- Image ImageView -->
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/description_text"
-        android:text="Back" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/womens" />
 
 </RelativeLayout>
