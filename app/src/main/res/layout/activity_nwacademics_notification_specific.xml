@@ -35,7 +35,7 @@
         android:onClick="onClick"
         android:paddingTop="16dp"
         android:paddingBottom="16dp"
-        android:text="Notification 1"
+        android:text="SUMMER JOB FAIR"
         android:textColor="@color/black"
         android:textSize="18sp" />
     <!-- Notification 2 -->

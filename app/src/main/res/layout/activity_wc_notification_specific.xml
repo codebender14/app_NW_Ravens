@@ -35,7 +35,7 @@
         android:onClick="onClick"
         android:paddingTop="16dp"
         android:paddingBottom="16dp"
-        android:text="Notification 1"
+        android:text="Women's History Month"
         android:textColor="@color/black"
         android:textSize="18sp" />
     <!-- Notification 2 -->
@@ -47,7 +47,7 @@
         android:onClick="onClick"
         android:paddingTop="16dp"
         android:paddingBottom="16dp"
-        android:text="Notification 2"
+        android:text="Health Counselling"
         android:textColor="@color/black"
         android:textSize="18sp" />
     <!-- Notification 3 -->
