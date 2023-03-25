@@ -74,6 +74,8 @@ public class NotificationDetailActivity extends AppCompatActivity {
                 return true;
             case R.id.delete:
                 dataRepo.setDeleted(notification_data.id);
+                setResult(RESULT_OK);
+                finish();
                 return true;
             default:
                 return false;

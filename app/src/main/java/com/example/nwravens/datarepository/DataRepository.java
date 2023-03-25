@@ -7,6 +7,7 @@ import com.example.nwravens.firebase.FirebaseDataCallback;
 import com.example.nwravens.firebase.FirebaseDataReader;
 
 import java.io.Serializable;
+import java.util.function.BiPredicate;
 
 public class DataRepository {
 
@@ -32,6 +33,11 @@ public class DataRepository {
     public void setDeleted(String id) {
         String readStatus = String.format("del_%s", id);
         sharedPreferences.edit().putBoolean(readStatus, true).apply();
+    }
+
+    public Boolean isDeleted(String id) {
+        String readStatus = String.format("del_%s", id);
+        return sharedPreferences.getBoolean(readStatus, false);
     }
 
     public void setMarkRead(String id, Boolean status) {

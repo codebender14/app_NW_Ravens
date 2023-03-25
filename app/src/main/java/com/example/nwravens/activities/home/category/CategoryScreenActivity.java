@@ -21,6 +21,7 @@ import com.example.nwravens.datarepository.DataRepository;
 import com.example.nwravens.firebase.FirebaseDataCallback;
 import com.example.nwravens.provider.ObjectProvider;
 
+import java.util.Iterator;
 import java.util.function.Predicate;
 
 public class CategoryScreenActivity extends AppCompatActivity {
@@ -72,9 +73,16 @@ public class CategoryScreenActivity extends AppCompatActivity {
     private NotificationCategory findSelectedCategory(Notifications notifications, String intentCategory) {
         for (NotificationCategory notification : notifications.notifications) {
             if (notification.category.equalsIgnoreCase(intentCategory)) {
-                for (NotificationData notification_datum : notification.notification_data) {
+
+                for (Iterator<NotificationData> iterator = notification.notification_data.iterator(); iterator.hasNext(); ) {
+                    NotificationData notification_datum = iterator.next();
                     notification_datum.is_new = !dataRepository.getReadStatus(notification_datum.id);
+                    if (dataRepository.isDeleted(notification_datum.id)) {
+//                        notification.notification_data.remove(notification_datum);
+                        iterator.remove();
+                    }
                 }
+
                 return notification;
             }
         }
