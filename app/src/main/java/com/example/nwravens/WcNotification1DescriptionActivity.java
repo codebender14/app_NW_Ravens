@@ -14,15 +14,15 @@ public class WcNotification1DescriptionActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wc_notification1_description);
-        backButton = findViewById(R.id.button);
+//        backButton = findViewById(R.id.button);
 
-        backButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(WcNotification1DescriptionActivity.this, WcNotificationSpecificActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        });
+//        backButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(WcNotification1DescriptionActivity.this, WcNotificationSpecificActivity.class);
+//                startActivity(intent);
+//                finish();
+//            }
+//        });
     }
 }
