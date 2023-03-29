@@ -1,16 +1,22 @@
 package com.example.nwravens.activities.home;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 
+import com.example.nwravens.LoginActivity;
 import com.example.nwravens.datamodels.Notifications;
 import com.example.nwravens.datarepository.DataRepository;
 import com.example.nwravens.firebase.FirebaseDataCallback;
 import com.example.nwravens.provider.ObjectProvider;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.material.snackbar.Snackbar;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 
 import androidx.core.view.WindowCompat;
@@ -23,6 +29,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.nwravens.databinding.ActivityHomeScreenBinding;
 
 import com.example.nwravens.R;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class HomeScreenActivity extends AppCompatActivity {
 
@@ -68,4 +75,19 @@ public class HomeScreenActivity extends AppCompatActivity {
     }
 
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == R.id.sign_out) {
+            FirebaseAuth.getInstance().signOut();
+            startActivity(new Intent(this, LoginActivity.class));
+            return true;
+        }
+        return false;
+    }
 }
