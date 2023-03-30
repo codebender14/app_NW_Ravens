@@ -12,6 +12,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.nwravens.activities.home.HomeScreenActivity;
+import com.example.nwravens.firebase.DataWriter;
 import com.google.android.gms.auth.api.identity.BeginSignInRequest;
 import com.google.android.gms.auth.api.identity.SignInCredential;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -27,6 +28,8 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+
+import org.json.JSONException;
 
 
 public class LoginActivity extends AppCompatActivity {
@@ -60,11 +63,6 @@ public class LoginActivity extends AppCompatActivity {
 //        } catch (JSONException e) {
 //            throw new RuntimeException(e);
 //        }
-//        try {
-//            addFireStoreData();
-//        } catch (JSONException e) {
-//            throw new RuntimeException(e);
-//        }
     }
 
     @Override
@@ -75,6 +73,8 @@ public class LoginActivity extends AppCompatActivity {
         if (currentUser != null) {
             navigateToMain();
         }
+
+
 
     }
 

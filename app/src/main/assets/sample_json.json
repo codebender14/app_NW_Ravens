@@ -2,20 +2,76 @@
   "notifications": [
     {
       "category": "Wellness Center",
-      "notification_count": 4,
+      "notification_count": 9,
       "notification_data": [
         {
-          "id": "",
-          "title": "Women's History Month",
-          "description": "The nationwide observance of Women History Month this year uses the themeCelebrating Women Who Tell Our Stories as a tribute to women in every community who have devoted their lives and talents to producing art and news, pursuing truth and reflecting society",
+          "id": "1",
+          "title": "Men's Health Month",
+          "description": "The nationwide observance of Men's Health Month this year uses the theme Celebrating Men's Health as a tribute to men in every community who have devoted their lives and talents to taking care of their physical and mental health. Join our celebration by attending our free health screening event!",
           "image_url": "",
           "is_new": true,
           "is_deleted": false
         },
         {
-          "id": "",
-          "title": "Health Counselling",
-          "description": " The goal of health counseling is to empower people to make informed decisions about their health and take positive steps towards achieving their health-related goals.",
+          "id": "2",
+          "title": "Yoga Classes",
+          "description": "Experience the benefits of yoga in our beginner-friendly classes. Improve your flexibility, balance, and mental well-being with our certified instructors. No previous experience required!",
+          "image_url": "",
+          "is_new": true,
+          "is_deleted": false
+        },
+        {
+          "id": "3",
+          "title": "Mental Health Workshop",
+          "description": "Take a step towards better mental health by joining our workshop. Learn about the most common mental health conditions, how to identify warning signs, and where to find help.",
+          "image_url": "",
+          "is_new": true,
+          "is_deleted": false
+        },
+        {
+          "id": "4",
+          "title": "Nutrition Counseling",
+          "description": "Get personalized advice on healthy eating habits from our registered dietitian. Our counseling sessions will help you develop a sustainable diet plan tailored to your individual needs and preferences.",
+          "image_url": "",
+          "is_new": true,
+          "is_deleted": false
+        },
+        {
+          "id": "5",
+          "title": "Wellness Retreat",
+          "description": "Escape from the hustle and bustle of daily life by attending our wellness retreat. Immerse yourself in a peaceful environment while practicing yoga, meditation, and other rejuvenating activities.",
+          "image_url": "",
+          "is_new": true,
+          "is_deleted": false
+        },
+        {
+          "id": "6",
+          "title": "Massage Therapy",
+          "description": "Relax your body and mind with our professional massage therapy services. Choose from a variety of techniques including Swedish, deep tissue, and hot stone massage.",
+          "image_url": "",
+          "is_new": true,
+          "is_deleted": false
+        },
+        {
+          "id": "7",
+          "title": "Fitness Classes",
+          "description": "Get in shape and have fun with our group fitness classes. Our experienced trainers will guide you through a variety of exercises that will improve your cardiovascular health and muscular strength.",
+          "image_url": "",
+          "is_new": true,
+          "is_deleted": false
+        },
+        {
+          "id": "8",
+          "title": "Self-Care Workshop",
+          "description": "Learn how to prioritize your well-being by attending our self-care workshop. Our expert speakers will share tips and techniques for reducing stress, increasing mindfulness, and improving overall health.",
+          "image_url": "",
+          "is_new": true,
+          "is_deleted": false
+        },
+        {
+          "id": "9",
+          "title": "Healthy Cooking Class",
+          "description": "Discover new and delicious ways to prepare healthy meals in our cooking classes. Our chefs will teach you how to use fresh ingredients and create flavorful dishes that will nourish your body and delight your taste buds.",
           "image_url": "",
           "is_new": true,
           "is_deleted": false
@@ -24,39 +80,71 @@
     },
     {
       "category": "Recreation Center",
-      "notification_count": 4,
+      "notification_count": 8,
       "notification_data": [
         {
-          "id": "",
-          "title": "Virtual Job Fair",
-          "description": "Join us for our virtual job fair on April 15th, where you can connect with top employers and learn about exciting job opportunities in various industries.",
-          "image_url": "https://example.com/images/job_fair.jpg",
+          "id": "1",
+          "title": "Summer Fun Fair",
+          "description": "Join us for our Summer Fun Fair on June 20th, where you can enjoy fun activities and games for all ages. Bring your family and friends for a day of outdoor entertainment!",
+          "image_url": "https://example.com/images/summer_fun_fair.jpg",
           "is_new": true,
           "is_deleted": false
         },
         {
-          "id": "",
-          "title": "Mental Health Awareness Month",
-          "description": "May is Mental Health Awareness Month, a time to raise awareness and reduce stigma around mental health issues. Let's work together to promote mental wellness and support those who are struggling.",
-          "image_url": "https://example.com/images/mental_health.jpg",
+          "id": "2",
+          "title": "Fitness Challenge",
+          "description": "Get ready for our fitness challenge! Join us for a 6-week program that includes personalized workout plans, nutrition guidance, and a chance to win amazing prizes. Let's get fit together!",
+          "image_url": "https://example.com/images/fitness_challenge.jpg",
           "is_new": true,
           "is_deleted": false
         },
         {
-          "id": "",
-          "title": "Healthy Eating Challenge",
-          "description": "Join our 30-day healthy eating challenge and learn how to make delicious and nutritious meals that will fuel your body and mind. Get support and motivation from our community of like-minded individuals.",
-          "image_url": "https://example.com/images/healthy_food.jpg",
+          "id": "3",
+          "title": "Outdoor Yoga Classes",
+          "description": "Join us for our outdoor yoga classes in the park every Saturday morning. Enjoy the fresh air and beautiful scenery while practicing yoga and improving your physical and mental health.",
+          "image_url": "https://example.com/images/outdoor_yoga.jpg",
           "is_new": true,
           "is_deleted": false
         },
         {
-          "id": "",
-          "title": "Financial Planning Webinar",
-          "description": "Are you ready to take control of your finances? Join our free webinar on financial planning and learn how to create a budget, save for the future, and invest wisely.",
-          "image_url": "https://example.com/images/finance.jpg",
+          "id": "4",
+          "title": "Kids Summer Camp",
+          "description": "Enroll your kids in our summer camp program! They will enjoy a variety of activities, including sports, arts and crafts, and nature exploration. Our experienced counselors will ensure that they have a fun and safe summer.",
+          "image_url": "https://example.com/images/kids_summer_camp.jpg",
           "is_new": true,
-          "is_deleted": true
+          "is_deleted": false
+        },
+        {
+          "id": "5",
+          "title": "Movie Night",
+          "description": "Join us for our outdoor movie night on the lawn. Bring your blankets and snacks and enjoy a family-friendly movie under the stars. It's a perfect way to spend a summer evening!",
+          "image_url": "https://example.com/images/movie_night.jpg",
+          "is_new": true,
+          "is_deleted": false
+        },
+        {
+          "id": "6",
+          "title": "Soccer Tournament",
+          "description": "Join our soccer tournament and compete against other teams for a chance to win the championship trophy. It's a great way to stay active and have fun with friends and teammates.",
+          "image_url": "https://example.com/images/soccer_tournament.jpg",
+          "is_new": true,
+          "is_deleted": false
+        },
+        {
+          "id": "7",
+          "title": "Swimming Lessons",
+          "description": "Sign up for our swimming lessons and learn how to swim or improve your swimming skills. Our certified instructors will teach you the proper techniques and help you become a confident swimmer.",
+          "image_url": "https://example.com/images/swimming_lessons.jpg",
+          "is_new": true,
+          "is_deleted": false
+        },
+        {
+          "id": "8",
+          "title": "Karate Classes",
+          "description": "Enroll in our karate classes and learn self-defense techniques while improving your physical and mental health. Our experienced instructors will guide you through the program and help you achieve your goals.",
+          "image_url": "https://example.com/images/karate_classes.jpg",
+          "is_new": true,
+          "is_deleted": false
         }
       ]
     },
