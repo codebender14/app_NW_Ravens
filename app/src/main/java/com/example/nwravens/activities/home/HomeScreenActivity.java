@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.nwravens.LoginActivity;
+import com.example.nwravens.activities.home.error.NoInternetActivity;
 import com.example.nwravens.datamodels.Notifications;
 import com.example.nwravens.datarepository.DataRepository;
 import com.example.nwravens.firebase.FirebaseDataCallback;
@@ -47,7 +48,8 @@ public class HomeScreenActivity extends AppCompatActivity {
         dataRepository = ObjectProvider.getDataRepo(this);
 
         progressDialog = ObjectProvider.getProgressDialog(this);
-        setContent();
+
+
     }
 
     void setContent() {
@@ -76,6 +78,15 @@ public class HomeScreenActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (ObjectProvider.isOnline(this)) {
+            setContent();
+        }else {
+            startActivity(new Intent(this, NoInternetActivity.class));
+        }
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
