@@ -3,17 +3,22 @@ package com.example.nwravens.activities.home.category;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Canvas;
 import android.os.Bundle;
 
 import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.nwravens.R;
+import com.example.nwravens.actions.SwipeActionsCallback;
 import com.example.nwravens.datamodels.NotificationCategory;
 import com.example.nwravens.datamodels.NotificationData;
 import com.example.nwravens.datamodels.Notifications;
@@ -24,18 +29,31 @@ import com.example.nwravens.provider.ObjectProvider;
 import java.util.Iterator;
 import java.util.function.Predicate;
 
+import it.xabaras.android.recyclerview.swipedecorator.RecyclerViewSwipeDecorator;
+
 public class CategoryScreenActivity extends AppCompatActivity {
 
 
     private RecyclerView recyclerView;
     private DataRepository dataRepository;
     private ProgressDialog progressDialog;
+    private CategoryScreenNotificationsAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen);
         recyclerView = findViewById(R.id.home_recycler_view);
+        adapter = new CategoryScreenNotificationsAdapter(this, launchActivity);
+
+        ItemTouchHelper itemTouchHelper = new ItemTouchHelper(callback);
+        itemTouchHelper.attachToRecyclerView(recyclerView);
+
+//        SwipeActionsCallback swipeActionsCallback = new SwipeActionsCallback(adapter, ContextCompat.getDrawable(this, R.drawable.baseline_delete_sweep_24), ContextCompat.getDrawable(this, R.drawable.baseline_remove_red_eye_24), R.color.purple_200, R.color.teal_200);
+//        ItemTouchHelper itemTouchHelper = new ItemTouchHelper(swipeActionsCallback);
+//        itemTouchHelper.attachToRecyclerView(recyclerView);
+        recyclerView.setAdapter(adapter);
+        ObjectProvider.setRecyclerViewDivider(recyclerView);
         dataRepository = ObjectProvider.getDataRepo(this);
         progressDialog = ObjectProvider.getProgressDialog(this);
         setTitle(getIntentCategory());
@@ -48,7 +66,7 @@ public class CategoryScreenActivity extends AppCompatActivity {
             public void showData(Notifications notifications) {
                 NotificationCategory selectedCategory = findSelectedCategory(notifications, getIntentCategory());
                 if (selectedCategory != null) {
-                    recyclerView.setAdapter(new CategoryScreenNotificationsAdapter(launchActivity, selectedCategory.notification_data));
+                    adapter.updateList(selectedCategory.notification_data);
                 }
 
             }
@@ -102,5 +120,39 @@ public class CategoryScreenActivity extends AppCompatActivity {
     private final ActivityResultLauncher<Intent> launchActivity = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), result -> {
         setContent();
     });
+
+    ItemTouchHelper.SimpleCallback callback = new ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.RIGHT | ItemTouchHelper.LEFT) {
+        @Override
+        public boolean onMove(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, RecyclerView.ViewHolder target) {
+            return false;
+        }
+
+        @Override
+        public void onSwiped(RecyclerView.ViewHolder viewHolder, int direction) {
+            // Take action for the swiped item
+            if (direction == ItemTouchHelper.LEFT) {
+                adapter.markAsRead(viewHolder.getLayoutPosition());
+            } else if (direction == ItemTouchHelper.RIGHT) {
+                adapter.deleteItem(viewHolder.getLayoutPosition());
+            }
+        }
+
+        @Override
+        public void onChildDraw(@NonNull Canvas c, @NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, float dX, float dY, int actionState, boolean isCurrentlyActive) {
+            new RecyclerViewSwipeDecorator.Builder(c, recyclerView, viewHolder, dX, dY, actionState, isCurrentlyActive)
+                    .addSwipeLeftBackgroundColor(R.color.mark_as_red)
+                    .addSwipeRightBackgroundColor(R.color.delete_red)
+//                    .setSwipeLeftActionIconTint(R.color.white)
+//                    .setSwipeRightActionIconTint(R.color.white)
+                    .addSwipeLeftActionIcon(R.drawable.baseline_remove_red_eye_24)
+                    .addSwipeRightActionIcon(R.drawable.baseline_delete_sweep_24)
+                    .create()
+                    .decorate();
+
+
+            super.onChildDraw(c, recyclerView, viewHolder, dX, dY, actionState, isCurrentlyActive);
+        }
+    };
+
 
 }

@@ -2,6 +2,8 @@ package com.example.nwravens.activities.home.category;
 
 import static androidx.activity.result.ActivityResultCallerKt.registerForActivityResult;
 
+import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,17 +20,30 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.nwravens.R;
 import com.example.nwravens.activities.home.details.NotificationDetailActivity;
 import com.example.nwravens.datamodels.NotificationData;
+import com.example.nwravens.datarepository.DataRepository;
+import com.example.nwravens.provider.ObjectProvider;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class CategoryScreenNotificationsAdapter extends RecyclerView.Adapter<CategoryScreenNotificationsAdapter.HomeScreenNotificationsViewHolder> {
 
-    private final List<NotificationData> list;
+    private final ArrayList<NotificationData> list = new ArrayList<>();
     private final ActivityResultLauncher<Intent> launchActivity;
 
-    CategoryScreenNotificationsAdapter(ActivityResultLauncher<Intent> launchActivity, List<NotificationData> list) {
+    private final DataRepository dataRepository;
+
+    CategoryScreenNotificationsAdapter(Context context, ActivityResultLauncher<Intent> launchActivity) {
         this.launchActivity = launchActivity;
-        this.list = list;
+        dataRepository = ObjectProvider.getDataRepo(context);
+    }
+
+    @SuppressLint("NotifyDataSetChanged")
+    public void updateList(List<NotificationData> list) {
+        this.list.clear();
+        this.list.addAll(list);
+        notifyDataSetChanged();
     }
 
 
@@ -55,6 +70,18 @@ public class CategoryScreenNotificationsAdapter extends RecyclerView.Adapter<Cat
     @Override
     public int getItemCount() {
         return list.size();
+    }
+
+    public void markAsRead(int position) {
+        list.get(position).is_new = false;
+        dataRepository.setMarkRead(list.get(position).id, true);
+        notifyItemChanged(position);
+    }
+
+    public void deleteItem(int position) {
+        list.remove(position);
+        dataRepository.setDeleted(list.get(position).id);
+        notifyItemRemoved(position);
     }
 
     static class HomeScreenNotificationsViewHolder extends RecyclerView.ViewHolder {

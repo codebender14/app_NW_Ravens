@@ -43,6 +43,7 @@ public class HomeScreenActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen);
         recyclerView = findViewById(R.id.home_recycler_view);
+//        ObjectProvider.setRecyclerViewDivider(recyclerView);
         dataRepository = ObjectProvider.getDataRepo(this);
 
         progressDialog = ObjectProvider.getProgressDialog(this);
@@ -53,12 +54,13 @@ public class HomeScreenActivity extends AppCompatActivity {
         dataRepository.getNotifications(new FirebaseDataCallback() {
             @Override
             public void showData(Notifications notifications) {
-                recyclerView.setAdapter(new HomeScreenNotificationsAdapter(notifications.notifications));
+                recyclerView.setAdapter(new HomeScreenNotificationsAdapter(HomeScreenActivity.this, notifications.notifications));
 
             }
 
             @Override
             public void showError(Throwable error) {
+
 
             }
 

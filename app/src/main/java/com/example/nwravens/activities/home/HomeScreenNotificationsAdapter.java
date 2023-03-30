@@ -1,5 +1,6 @@
 package com.example.nwravens.activities.home;
 
+import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,15 +13,21 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.nwravens.R;
 import com.example.nwravens.activities.home.category.CategoryScreenActivity;
 import com.example.nwravens.datamodels.NotificationCategory;
+import com.example.nwravens.datamodels.NotificationData;
+import com.example.nwravens.datarepository.DataRepository;
+import com.example.nwravens.provider.ObjectProvider;
 
 import java.util.List;
 
 public class HomeScreenNotificationsAdapter extends RecyclerView.Adapter<HomeScreenNotificationsAdapter.HomeScreenNotificationsViewHolder> {
 
     private List<NotificationCategory> list;
+    private final DataRepository dataRepo;
 
-    HomeScreenNotificationsAdapter(List<NotificationCategory> list) {
+    HomeScreenNotificationsAdapter(Context context, List<NotificationCategory> list) {
 
+
+        dataRepo = ObjectProvider.getDataRepo(context);
         this.list = list;
     }
 
@@ -34,9 +41,18 @@ public class HomeScreenNotificationsAdapter extends RecyclerView.Adapter<HomeScr
 
     @Override
     public void onBindViewHolder(@NonNull HomeScreenNotificationsViewHolder holder, int position) {
-        holder.setNotificationCategory(list.get(position));
-        holder.notificationName.setText(list.get(position).category);
-        holder.notificationCount.setText(String.valueOf(list.get(position).notification_count));
+        NotificationCategory notificationCategory = list.get(position);
+        holder.setNotificationCategory(notificationCategory);
+        holder.notificationName.setText(notificationCategory.category);
+
+        int count = 0;
+        for (NotificationData notification_datum : notificationCategory.notification_data) {
+            if (!dataRepo.isDeleted(notification_datum.id)) {
+                count++;
+            }
+        }
+
+        holder.notificationCount.setText(String.valueOf(count));
     }
 
     @Override
@@ -55,14 +71,10 @@ public class HomeScreenNotificationsAdapter extends RecyclerView.Adapter<HomeScr
             super(itemView);
             notificationName = itemView.findViewById(R.id.home_screen_notification_list_item_text);
             notificationCount = itemView.findViewById(R.id.home_screen_notification_list_item_text_count);
-            itemView.setOnClickListener(new View.OnClickListener() {
-
-                @Override
-                public void onClick(View view) {
-                    Intent intent = new Intent(view.getContext(), CategoryScreenActivity.class);
-                    intent.putExtra("category_name", notificationCategory.category);
-                    view.getContext().startActivity(intent);
-                }
+            itemView.setOnClickListener(view -> {
+                Intent intent = new Intent(view.getContext(), CategoryScreenActivity.class);
+                intent.putExtra("category_name", notificationCategory.category);
+                view.getContext().startActivity(intent);
             });
         }
 

@@ -3,15 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:padding="16dp">
 
     <TextView
         android:id="@+id/category_screen_notification_list_item_text"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:paddingStart="16dp"
-        android:paddingTop="16dp"
-        android:paddingBottom="16dp"
         android:textColor="@color/black"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -24,13 +22,13 @@
         android:id="@+id/category_screen_notification_list_item_unred_status"
         android:layout_width="10dp"
         android:layout_height="10dp"
-        android:layout_marginLeft="6dp"
-        tools:background="@drawable/unred"
+        android:layout_marginStart="6dp"
         android:gravity="center"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/category_screen_notification_list_item_text"
         app:layout_constraintStart_toEndOf="@+id/category_screen_notification_list_item_text"
-        app:layout_constraintTop_toTopOf="@+id/category_screen_notification_list_item_text">
+        app:layout_constraintTop_toTopOf="@+id/category_screen_notification_list_item_text"
+        tools:background="@drawable/unred">
 
     </TextView>
 
