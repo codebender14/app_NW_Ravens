@@ -1,6 +1,5 @@
 package com.example.nwravens.activities.home.details;
 
-
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -22,9 +21,8 @@ public class NotificationDetailActivity extends AppCompatActivity {
     private DataRepository dataRepo;
     private TextView titleView;
     private TextView descriptionView;
-    private ImageView imageView;
     private NotificationData notification_data;
-
+    private ImageView imageView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

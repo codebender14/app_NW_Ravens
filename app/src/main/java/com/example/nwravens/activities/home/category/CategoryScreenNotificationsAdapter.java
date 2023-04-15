@@ -29,8 +29,8 @@ import java.util.List;
 
 public class CategoryScreenNotificationsAdapter extends RecyclerView.Adapter<CategoryScreenNotificationsAdapter.HomeScreenNotificationsViewHolder> {
 
-    private final ArrayList<NotificationData> list = new ArrayList<>();
     private final ActivityResultLauncher<Intent> launchActivity;
+    private final ArrayList<NotificationData> list = new ArrayList<>();
 
     private final DataRepository dataRepository;
 
@@ -45,7 +45,6 @@ public class CategoryScreenNotificationsAdapter extends RecyclerView.Adapter<Cat
         this.list.addAll(list);
         notifyDataSetChanged();
     }
-
 
     @NonNull
     @Override
@@ -105,6 +104,5 @@ public class CategoryScreenNotificationsAdapter extends RecyclerView.Adapter<Cat
             });
         }
     }
-
 
 }

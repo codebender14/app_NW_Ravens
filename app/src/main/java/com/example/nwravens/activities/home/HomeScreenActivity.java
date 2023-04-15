@@ -34,10 +34,9 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class HomeScreenActivity extends AppCompatActivity {
 
-
     private RecyclerView recyclerView;
-    private DataRepository dataRepository;
     private ProgressDialog progressDialog;
+    private DataRepository dataRepository;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,7 +47,6 @@ public class HomeScreenActivity extends AppCompatActivity {
         dataRepository = ObjectProvider.getDataRepo(this);
 
         progressDialog = ObjectProvider.getProgressDialog(this);
-
 
     }
 
@@ -62,7 +60,6 @@ public class HomeScreenActivity extends AppCompatActivity {
 
             @Override
             public void showError(Throwable error) {
-
 
             }
 
@@ -83,7 +80,7 @@ public class HomeScreenActivity extends AppCompatActivity {
         super.onResume();
         if (ObjectProvider.isOnline(this)) {
             setContent();
-        }else {
+        } else {
             startActivity(new Intent(this, NoInternetActivity.class));
         }
     }

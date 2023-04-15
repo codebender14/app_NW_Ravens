@@ -33,11 +33,10 @@ import it.xabaras.android.recyclerview.swipedecorator.RecyclerViewSwipeDecorator
 
 public class CategoryScreenActivity extends AppCompatActivity {
 
-
-    private RecyclerView recyclerView;
-    private DataRepository dataRepository;
     private ProgressDialog progressDialog;
     private CategoryScreenNotificationsAdapter adapter;
+    private RecyclerView recyclerView;
+    private DataRepository dataRepository;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,7 +87,7 @@ public class CategoryScreenActivity extends AppCompatActivity {
         for (NotificationCategory notification : notifications.notifications) {
             if (notification.category.equalsIgnoreCase(intentCategory)) {
 
-                for (Iterator<NotificationData> iterator = notification.notification_data.iterator(); iterator.hasNext(); ) {
+                for (Iterator<NotificationData> iterator = notification.notification_data.iterator(); iterator.hasNext();) {
                     NotificationData notification_datum = iterator.next();
                     notification_datum.is_new = !dataRepository.getReadStatus(notification_datum.id);
                     if (dataRepository.isDeleted(notification_datum.id)) {
@@ -138,17 +137,15 @@ public class CategoryScreenActivity extends AppCompatActivity {
             new RecyclerViewSwipeDecorator.Builder(c, recyclerView, viewHolder, dX, dY, actionState, isCurrentlyActive)
                     .addSwipeLeftBackgroundColor(R.color.mark_as_red)
                     .addSwipeRightBackgroundColor(R.color.delete_red)
-//                    .setSwipeLeftActionIconTint(R.color.white)
-//                    .setSwipeRightActionIconTint(R.color.white)
+                    //                    .setSwipeLeftActionIconTint(R.color.white)
+                    //                    .setSwipeRightActionIconTint(R.color.white)
                     .addSwipeLeftActionIcon(R.drawable.baseline_remove_red_eye_24)
                     .addSwipeRightActionIcon(R.drawable.baseline_delete_sweep_24)
                     .create()
                     .decorate();
 
-
             super.onChildDraw(c, recyclerView, viewHolder, dX, dY, actionState, isCurrentlyActive);
         }
     };
-
 
 }

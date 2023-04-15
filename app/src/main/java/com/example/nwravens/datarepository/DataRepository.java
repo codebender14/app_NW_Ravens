@@ -12,11 +12,11 @@ import java.util.function.BiPredicate;
 public class DataRepository {
 
     private final SharedPreferences sharedPreferences;
-    private final Context context;
     private final FirebaseDataReader firebaseDataReader;
+    private final Context context;
 
     private static final String DATA_PREF = "data_prefs";
-    
+
     public DataRepository(Context context, FirebaseDataReader firebaseDataReader) {
 
         this.context = context;
@@ -24,7 +24,6 @@ public class DataRepository {
 
         sharedPreferences = context.getSharedPreferences(DATA_PREF, Context.MODE_PRIVATE);
     }
-
 
     public void getNotifications(FirebaseDataCallback firebaseDataCallback) {
         firebaseDataReader.readNotifications(firebaseDataCallback);
@@ -50,4 +49,3 @@ public class DataRepository {
         return sharedPreferences.getBoolean(readStatus, false);
     }
 }
-

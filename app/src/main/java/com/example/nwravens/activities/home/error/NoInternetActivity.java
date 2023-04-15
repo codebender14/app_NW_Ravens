@@ -8,6 +8,7 @@ import com.example.nwravens.R;
 
 public class NoInternetActivity extends AppCompatActivity {
 
+    // this is a default screen when the app is not connected to the internet
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
