@@ -14,6 +14,7 @@ import com.example.nwravens.activities.home.category.CategoryScreenNotifications
 
 public class SwipeActionsCallback extends ItemTouchHelper.SimpleCallback {
 
+    //declaring instance variables
     private CategoryScreenNotificationsAdapter mAdapter;
     private Drawable deleteIcon;
     private Drawable editIcon;
