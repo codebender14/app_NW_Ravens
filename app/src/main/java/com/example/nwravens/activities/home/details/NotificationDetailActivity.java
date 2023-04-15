@@ -19,11 +19,10 @@ import com.example.nwravens.provider.ObjectProvider;
 
 public class NotificationDetailActivity extends AppCompatActivity {
 
+    private DataRepository dataRepo;
     private TextView titleView;
     private TextView descriptionView;
     private ImageView imageView;
-
-    private DataRepository dataRepo;
     private NotificationData notification_data;
 
 

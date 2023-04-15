@@ -11,12 +11,12 @@ import java.util.function.BiPredicate;
 
 public class DataRepository {
 
+    private final SharedPreferences sharedPreferences;
     private final Context context;
     private final FirebaseDataReader firebaseDataReader;
-    private final SharedPreferences sharedPreferences;
 
     private static final String DATA_PREF = "data_prefs";
-
+    
     public DataRepository(Context context, FirebaseDataReader firebaseDataReader) {
 
         this.context = context;

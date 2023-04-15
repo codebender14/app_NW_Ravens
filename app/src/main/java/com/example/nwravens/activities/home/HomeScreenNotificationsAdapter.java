@@ -10,19 +10,20 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.nwravens.R;
 import com.example.nwravens.activities.home.category.CategoryScreenActivity;
 import com.example.nwravens.datamodels.NotificationCategory;
 import com.example.nwravens.datamodels.NotificationData;
 import com.example.nwravens.datarepository.DataRepository;
 import com.example.nwravens.provider.ObjectProvider;
+import com.example.nwravens.R;
 
 import java.util.List;
 
 public class HomeScreenNotificationsAdapter extends RecyclerView.Adapter<HomeScreenNotificationsAdapter.HomeScreenNotificationsViewHolder> {
 
-    private List<NotificationCategory> list;
+    
     private final DataRepository dataRepo;
+    private List<NotificationCategory> list;
 
     HomeScreenNotificationsAdapter(Context context, List<NotificationCategory> list) {
 
@@ -62,8 +63,9 @@ public class HomeScreenNotificationsAdapter extends RecyclerView.Adapter<HomeScr
 
     static class HomeScreenNotificationsViewHolder extends RecyclerView.ViewHolder {
 
-        private TextView notificationName;
+        
         private TextView notificationCount;
+        private TextView notificationName;
 
         private NotificationCategory notificationCategory;
 

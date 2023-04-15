@@ -34,10 +34,11 @@ import org.json.JSONException;
 
 public class LoginActivity extends AppCompatActivity {
 
-    private BeginSignInRequest signInRequest;
-    private FirebaseAuth mAuth;
+    
     private static final int RC_SIGN_IN = 9001;
     private GoogleSignInClient mGoogleSignInClient;
+    private BeginSignInRequest signInRequest;
+    private FirebaseAuth mAuth;
 
 
     private static final String TAG = "LoginActivity";

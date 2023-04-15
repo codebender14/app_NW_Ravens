@@ -59,11 +59,10 @@ public class SwipeActionsCallback extends ItemTouchHelper.SimpleCallback {
         }
 
         if (dX < 0) {
-            // Swiping to the left (delete action)
+            // Swiping to the left this refers to (delete action)
             deleteBackground.setColor(Color.RED);
             deleteBackground.setBounds(itemView.getRight() + (int) dX, itemView.getTop(), itemView.getRight(), itemView.getBottom());
             deleteBackground.draw(canvas);
-
             int deleteIconMargin = (itemHeight - deleteIcon.getIntrinsicHeight()) / 2;
             int deleteIconTop = itemView.getTop() + (itemHeight - deleteIcon.getIntrinsicHeight()) / 2;
             int deleteIconBottom = deleteIconTop + deleteIcon.getIntrinsicHeight();
