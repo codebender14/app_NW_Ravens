@@ -26,8 +26,8 @@ Supported devices:- Android Mobile
 
 
 APK details:
-### APK name: com.example.nwravens;
-### APK size: 4.62 MB
-### Minimum Android version: Android 7.0 (Nougat)
-### Target Android version: Android 33.0
+APK name: com.example.nwravens;
+APK size: 4.62 MB
+Minimum Android version: Android 7.0 (Nougat)
+Target Android version: Android 33.0
 
