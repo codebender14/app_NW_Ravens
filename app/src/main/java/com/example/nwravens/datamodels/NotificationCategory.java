@@ -5,6 +5,7 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 public class NotificationCategory {
+    //this is a notification category code to handle notification data
     @SerializedName("category")
     public String category;
     @SerializedName("notification_count")
