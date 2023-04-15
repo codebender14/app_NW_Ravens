@@ -13,6 +13,7 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import java.util.ArrayList;
 
 public class FirebaseDataReader {
+    //this class will handle the entire firebase data reader
 
     private FirebaseFirestore database = FirebaseFirestore.getInstance();
 
