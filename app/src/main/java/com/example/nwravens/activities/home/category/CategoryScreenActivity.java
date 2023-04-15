@@ -48,10 +48,6 @@ public class CategoryScreenActivity extends AppCompatActivity {
 
         ItemTouchHelper itemTouchHelper = new ItemTouchHelper(callback);
         itemTouchHelper.attachToRecyclerView(recyclerView);
-
-//        SwipeActionsCallback swipeActionsCallback = new SwipeActionsCallback(adapter, ContextCompat.getDrawable(this, R.drawable.baseline_delete_sweep_24), ContextCompat.getDrawable(this, R.drawable.baseline_remove_red_eye_24), R.color.purple_200, R.color.teal_200);
-//        ItemTouchHelper itemTouchHelper = new ItemTouchHelper(swipeActionsCallback);
-//        itemTouchHelper.attachToRecyclerView(recyclerView);
         recyclerView.setAdapter(adapter);
         ObjectProvider.setRecyclerViewDivider(recyclerView);
         dataRepository = ObjectProvider.getDataRepo(this);
