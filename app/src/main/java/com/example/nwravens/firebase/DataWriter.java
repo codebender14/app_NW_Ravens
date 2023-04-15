@@ -20,6 +20,7 @@ import java.util.UUID;
 
 public class DataWriter {
 
+    //this class will handle all the write operations
 
     private static String loadJSONFromAsset(Context context) {
         String json = null;
