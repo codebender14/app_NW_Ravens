@@ -28,7 +28,7 @@ public class FirebaseDataReader {
 
                 ArrayList<NotificationCategory> list = new ArrayList<>();
                 for (QueryDocumentSnapshot document : task.getResult()) {
-                    // Handle each document here
+                    // handling will be performed
                     list.add(document.toObject(NotificationCategory.class));
                 }
                 Notifications notifications = new Notifications();

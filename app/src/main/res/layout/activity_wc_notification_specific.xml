@@ -50,36 +50,6 @@
         android:text="Health Counselling"
         android:textColor="@color/black"
         android:textSize="18sp" />
-    <!-- Notification 3 -->
-    <!--<TextView
-        android:id="@+id/noti3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:drawableEnd="@drawable/ic_forward_arrow"
-        android:onClick="onClick"
-        android:paddingTop="16dp"
-        android:paddingBottom="16dp"
-        android:text="Notification 3"
-        android:textColor="@color/black"
-        android:textSize="18sp" />-->
-    <!-- Notification 4 -->
-    <!--<TextView
-        android:id="@+id/noti4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:drawableEnd="@drawable/ic_forward_arrow"
-        android:onClick="onClick"
-        android:paddingTop="16dp"
-        android:paddingBottom="16dp"
-        android:text="Notification 4"
-        android:textColor="@color/black"
-        android:textSize="18sp" />-->
-
-    <!--<Button
-        android:id="@+id/button"
-        android:layout_width="137dp"
-        android:layout_height="wrap_content"
-        android:text="Back" />-->
 
 
 </LinearLayout>
