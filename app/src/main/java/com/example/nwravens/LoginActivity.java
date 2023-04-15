@@ -56,13 +56,6 @@ public class LoginActivity extends AppCompatActivity {
         loginButton.setOnClickListener(v -> {
             signIn();
         });
-
-
-//        try {
-//            DataWriter.addFireStoreData(this);
-//        } catch (JSONException e) {
-//            throw new RuntimeException(e);
-//        }
     }
 
     @Override
@@ -73,8 +66,6 @@ public class LoginActivity extends AppCompatActivity {
         if (currentUser != null) {
             navigateToMain();
         }
-
-
 
     }
 
