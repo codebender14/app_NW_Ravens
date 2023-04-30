@@ -23,6 +23,8 @@ Sequnce Information:-
 
 
 Supported devices:- Android Mobile
+Test Credentials:
+firebasedba@gmail.com || Firebase@123
 
 
 APK details:
